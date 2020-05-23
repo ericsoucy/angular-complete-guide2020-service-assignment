@@ -6,17 +6,10 @@ import { UsersServiceService } from "./users-service.service";
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"],
 })
-export class AppComponent implements OnInit {
-  activeUsers = [];
-  inactiveUsers = [];
-
+export class AppComponent {
   constructor(private usersService: UsersServiceService) {}
 
-  ngOnInit() {
-    this.activeUsers = this.usersService.activeUsers;
-    this.inactiveUsers = this.usersService.inactiveUsers;
-  }
-
+  /*
   onSetToInactive(id: number) {
     this.usersService.addInactiveUser(id);
 
@@ -28,5 +21,5 @@ export class AppComponent implements OnInit {
     this.usersService.addActiveUser(id);
     //this.activeUsers.push(this.inactiveUsers[id]);
     //this.inactiveUsers.splice(id, 1);
-  }
+  }*/
 }
